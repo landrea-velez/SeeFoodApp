@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">SeeFoodApp</string>
+    <string name="places">Mis sitios</string>
+    <string name="refresh">refresh</string>
+
+</resources>

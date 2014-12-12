@@ -1,0 +1,35 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Estoy en"
+        android:gravity="left"
+        android:layout_margin="5px"
+        android:drawableLeft="@drawable/pin56"
+        android:textSize="8pt"
+        android:id="@+id/button"
+        android:onClick="mostrarMap" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mis sitios"
+        android:gravity="center"
+        android:layout_margin="5px"
+        android:textSize="10pt"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView">
+        </ListView>
+    </FrameLayout>
+</LinearLayout>
