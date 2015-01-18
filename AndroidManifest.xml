@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="searchffp.compmovil.udea.edu.co.seefoodapp" >
     
-    <uses-sdk android:minSdkVersion="15"
-          android:targetSdkVersion="21" />
+     <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
 
     <permission
         android:name="searchffp.compmovil.udea.edu.co.seefoodapp.permission.MAPS_RECEIVE"
