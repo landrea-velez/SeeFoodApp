@@ -24,7 +24,7 @@ public class DataBaseManager {
             + CN_LONGITUDE + " text,"
             + CN_ADDRESS + " text not null);";
 
-    public static final String DATA_ID = "008";
+    public static final String DATA_ID = "009";
     public static final String DATA_NAME = "Restaurante";
     public static final String DATA_LATITUDE = "4006";
     public static final String DATA_LONGITUDE = "2355";

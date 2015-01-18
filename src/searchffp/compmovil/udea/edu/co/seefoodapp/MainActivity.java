@@ -1,5 +1,6 @@
 package searchffp.compmovil.udea.edu.co.seefoodapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,7 +12,6 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 public class MainActivity extends ListActivity{
 
@@ -29,7 +29,7 @@ public class MainActivity extends ListActivity{
         cursor.addRow(new Object[] {"4", R.drawable.ice63, "HELADOS", "Helados, malteadas, salpicón"});
         cursor.addRow(new Object[] {"5", R.drawable.plate9, "RESTAURANTE", "Almuerzos"});
 
-        //Añadimos los datos al Adapter y le indicamos donde dibujar cada dato en la fila del Layout
+        //AÃ±adimos los datos al Adapter y le indicamos donde dibujar cada dato en la fila del Layout
         String[] desdeEstasColumnas = {"imagen", "textoSuperior", "textoInferior"};
         int[] aEstasViews = {R.id.imageView_imagen, R.id.textView_superior, R.id.textView_inferior};
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.activity_main, cursor, desdeEstasColumnas, aEstasViews, 0);
@@ -56,8 +56,11 @@ public class MainActivity extends ListActivity{
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_settings:
+            case R.id.action_places:
                 startActivity(new Intent(this, MyPlaces.class));
+                return true;
+            case R.id.action_localization:
+                startActivity(new Intent(this, MapActivity.class));
                 return true;
             default:
                 return false;

@@ -3,8 +3,17 @@
 
     <string name="app_name">SeeFoodApp</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-     <string name="places">Mis sitios</string>
+            
+    <string name="action_places">Settings</string>
+     <string name="places">Mis sitios favoritos</string>
+          
+     <string name="action_localization">Settings</string>
+     <string name="localization">Estoy en</string>
+     
+     <string name="action_about">Settings</string>
+     <string name="about">Acerca de</string>
+     
+     
     <string name="refresh">refresh</string>
 
 </resources>

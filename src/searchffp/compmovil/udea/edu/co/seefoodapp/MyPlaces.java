@@ -28,16 +28,19 @@ public class MyPlaces extends Activity{
         DbHelper dbHelper = new DbHelper(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
+
         try {
+
             values.clear();
             values.put(DataBaseManager.CN_ADDRESS, DataBaseManager.DATA_ADDRESS);
             values.put(DataBaseManager.CN_LONGITUDE, DataBaseManager.DATA_LONGITUDE);
             values.put(DataBaseManager.CN_LATITUDE, DataBaseManager.DATA_LATITUDE);
             values.put(DataBaseManager.CN_NAME, DataBaseManager.DATA_NAME);
             values.put(DataBaseManager.CN_ID, DataBaseManager.DATA_ID);
-            Log.d(TAG, " " + values);
 
-            Uri uri = getContentResolver().insert(DataBaseManager.CONTENT_URI, values);
+                Log.d(TAG, " " + values);
+
+      //  Uri uri = getContentResolver().insert(DataBaseManager.CONTENT_URI, values);
 
 
             // Get content provider and cursor
@@ -46,16 +49,19 @@ public class MyPlaces extends Activity{
             Log.d(TAG, "cursor " + cursor );
             // Let activity manage the cursor
            // startManagingCursor(cursor);
-            //Log.d(TAG, "cursor.getCount" + cursor.getCount());            
+            //Log.d(TAG, "cursor.getCount" + cursor.getCount());
+
+            // Get the list view
+            ListView listView = (ListView) findViewById(R.id.listView);
+            Log.d(TAG, "name " + DataBaseManager.CN_NAME );
+            Log.d(TAG, "Address " + DataBaseManager.CN_ADDRESS );
 
             String[] from = { DataBaseManager.CN_NAME, DataBaseManager.CN_ADDRESS };
             int[] to = { R.id.textName, R.id.textValue };
 
-            SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.row, cursor, from, to,0);
+            SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.row, cursor, from, to);
             Log.d(TAG, "adapter " + adapter );
-                                
-         // Get the list view
-            ListView listView = (ListView) findViewById(R.id.listView);
+
             listView.setAdapter(adapter);
 
 
