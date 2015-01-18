@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="C:\Users\landrea.velez\Downloads\SeeFoodApp-master\SeeFoodApp\app\build\intermediates\pre-dexed\debug\android-support-v4-e18f164b89a328f873297904ad0ac8418005014d.jar"
+        jar="C:\Users\landrea.velez\Downloads\SeeFoodApp-master\SeeFoodApp\libs\android-support-v4.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="48c94ae70fa65718b382098237806a5909bb096e"/>
+    <item
+        dex="C:\Users\landrea.velez\Downloads\SeeFoodApp-master\SeeFoodApp\app\build\intermediates\pre-dexed\debug\google-play-services-cf0655c64a7fdbe72e7a0422dce48ea603a480a6.jar"
+        jar="C:\Users\landrea.velez\Downloads\SeeFoodApp-master\SeeFoodApp\libs\google-play-services.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9b63d9aba531aa7ff5dd30e0c872e8ca550b363a"/>
+
+</pre-dex-items>

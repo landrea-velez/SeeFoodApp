@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SeeFoodApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="places">Mis sitios</string>
+    <string name="refresh">refresh</string>
+
+</resources>
