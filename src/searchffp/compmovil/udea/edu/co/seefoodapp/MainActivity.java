@@ -25,9 +25,9 @@ public class MainActivity extends ListActivity{
         cursor.addRow(new Object[] {"0", R.drawable.watermelon3, "FRUTAS", "Jugos y ensalada de frutas"});
         cursor.addRow(new Object[] {"1", R.drawable.christmas230, "BURBUJAS", "Dulces"});
         cursor.addRow(new Object[] {"2", R.drawable.burger9, "COMIDA RÁPIDA", "Hamburguesas, patacones, pollo"});
-        cursor.addRow(new Object[] {"3", R.drawable.snacks1, "CAFETERÍA", "Panadería, aperitivos y platos combinados"});
+        cursor.addRow(new Object[] {"3", R.drawable.snacks1, "CAFETERÍAS", "Panadería, aperitivos y platos combinados"});
         cursor.addRow(new Object[] {"4", R.drawable.ice63, "HELADOS", "Helados, malteadas, salpicón"});
-        cursor.addRow(new Object[] {"5", R.drawable.plate9, "RESTAURANTE", "Almuerzos"});
+        cursor.addRow(new Object[] {"5", R.drawable.plate9, "RESTAURANTES", "Almuerzos"});
 
         //AÃ±adimos los datos al Adapter y le indicamos donde dibujar cada dato en la fila del Layout
         String[] desdeEstasColumnas = {"imagen", "textoSuperior", "textoInferior"};
@@ -43,8 +43,11 @@ public class MainActivity extends ListActivity{
     @Override
     public void onListItemClick(ListView lista, View view, int posicion, long id) {
         TextView textoTitulo = (TextView) view.findViewById(R.id.textView_superior);
-        CharSequence texto = "Seleccionado: " + textoTitulo.getText();
+        CharSequence texto = " " + textoTitulo.getText();
         Toast.makeText(getApplicationContext(), texto, Toast.LENGTH_LONG).show();
+        if (textoTitulo.getText().equals("FRUTAS")){
+        	startActivity(new Intent(this, MapActivity.class));
+        }      
     }
 
     @Override

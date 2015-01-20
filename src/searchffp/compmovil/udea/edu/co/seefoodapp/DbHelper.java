@@ -14,15 +14,16 @@ public class DbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(DataBaseManager.CREATE_TABLE);
-        Log.d(TAG, "onCreate with SQL: " + DataBaseManager.CREATE_TABLE);
+        db.execSQL(DataBaseManager.DB_SCHEMA);        
+        /*db.execSQL("INSERT INTO " +DataBaseManager.TABLE_NAME+ " ("+DataBaseManager.CN_TYPE+", "+DataBaseManager.CN_NAME+") VALUES ('Cafeteria2','COESDUA2')");           
+        Log.d(TAG, "onCreate with SQL: " + DataBaseManager.CREATE_TABLE);*/
     }
 
         @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-        //db.execSQL("drop table if exists " + StatusContract.TABLE_NAME);
-        //onCreate(db);
-
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {        	
+        	Log.d(TAG, "Upgrading database. Existing contents will be lost. ["
+                    + oldVersion + "]->[" + newVersion + "]");
+            db.execSQL("DROP TABLE IF EXISTS " + DataBaseManager.TABLE_NAME);
+            onCreate(db);
     }
 }

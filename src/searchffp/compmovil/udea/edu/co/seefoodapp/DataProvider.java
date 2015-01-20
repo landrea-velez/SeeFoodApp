@@ -14,17 +14,18 @@ import android.widget.Toast;
 
 
 public class DataProvider extends ContentProvider {
-
-    private static final String TAG = DataProvider.class.getSimpleName();
-    private DbHelper dbHelper;
+    
+	private static final String TAG = DataProvider.class.getSimpleName();  
+	
+	
     private static final UriMatcher sURIMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-
     static {
         sURIMatcher.addURI(DataBaseManager.AUTHORITY, DataBaseManager.TABLE_NAME, DataBaseManager.STATUS_DIR);
         sURIMatcher.addURI(DataBaseManager.AUTHORITY, DataBaseManager.TABLE_NAME + "/#", DataBaseManager.STATUS_ITEM);
     }
 
 
+    private DbHelper dbHelper;
     @Override
     public boolean onCreate() {
         dbHelper = new DbHelper(getContext());
@@ -34,7 +35,26 @@ public class DataProvider extends ContentProvider {
 
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
-        return null;
+        SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
+        queryBuilder.setTables(DataBaseManager.TABLE_NAME);
+     
+        int uriType = sURIMatcher.match(uri);
+        switch (uriType) {
+        case DataBaseManager.STATUS_DIR:
+            queryBuilder.appendWhere(DataBaseManager.CN_ID + "="
+                    + uri.getLastPathSegment());
+            break;
+        case DataBaseManager.STATUS_ITEM:
+            // no filter
+            break;
+        default:
+            throw new IllegalArgumentException("Unknown URI");
+        }
+     
+        Cursor cursor = queryBuilder.query(dbHelper.getReadableDatabase(),
+                projection, selection, selectionArgs, null, null, sortOrder);
+        cursor.setNotificationUri(getContext().getContentResolver(), uri);
+        return cursor;
     }
 
 

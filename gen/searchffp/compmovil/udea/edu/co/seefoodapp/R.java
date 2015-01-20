@@ -2080,7 +2080,7 @@ containing a value of this type.
         public static final int watermelon3=0x7f02005b;
     }
     public static final class id {
-        public static final int action_about=0x7f0c005b;
+        public static final int action_about=0x7f0c005e;
         public static final int action_bar=0x7f0c0045;
         public static final int action_bar_activity_content=0x7f0c0003;
         public static final int action_bar_container=0x7f0c0044;
@@ -2089,13 +2089,13 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f0c0033;
         public static final int action_bar_title=0x7f0c0032;
         public static final int action_context_bar=0x7f0c0046;
-        public static final int action_localization=0x7f0c005c;
+        public static final int action_localization=0x7f0c005f;
         public static final int action_menu_divider=0x7f0c0005;
         public static final int action_menu_presenter=0x7f0c0006;
         public static final int action_mode_bar=0x7f0c0042;
         public static final int action_mode_bar_stub=0x7f0c0041;
         public static final int action_mode_close_button=0x7f0c0034;
-        public static final int action_places=0x7f0c005d;
+        public static final int action_places=0x7f0c0060;
         public static final int activity_chooser_view_content=0x7f0c0035;
         public static final int adjust_height=0x7f0c0009;
         public static final int adjust_width=0x7f0c000a;
@@ -2143,6 +2143,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f0c0007;
         public static final int progress_horizontal=0x7f0c0008;
         public static final int radio=0x7f0c003f;
+        public static final int ratingBar1=0x7f0c005d;
         public static final int sandbox=0x7f0c0013;
         public static final int satellite=0x7f0c000e;
         public static final int search_badge=0x7f0c0049;
@@ -2168,7 +2169,9 @@ containing a value of this type.
         public static final int textName=0x7f0c0059;
         public static final int textValue=0x7f0c005a;
         public static final int textView_inferior=0x7f0c0055;
+        public static final int textView_nomLocal=0x7f0c005c;
         public static final int textView_superior=0x7f0c0054;
+        public static final int textView_tipoLocal=0x7f0c005b;
         public static final int title=0x7f0c003b;
         public static final int up=0x7f0c0001;
         public static final int useLogo=0x7f0c0027;

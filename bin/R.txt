@@ -438,7 +438,7 @@ int drawable powered_by_google_dark 0x7f020058
 int drawable powered_by_google_light 0x7f020059
 int drawable snacks1 0x7f02005a
 int drawable watermelon3 0x7f02005b
-int id action_about 0x7f0c005b
+int id action_about 0x7f0c005e
 int id action_bar 0x7f0c0045
 int id action_bar_activity_content 0x7f0c0003
 int id action_bar_container 0x7f0c0044
@@ -447,13 +447,13 @@ int id action_bar_spinner 0x7f0c0002
 int id action_bar_subtitle 0x7f0c0033
 int id action_bar_title 0x7f0c0032
 int id action_context_bar 0x7f0c0046
-int id action_localization 0x7f0c005c
+int id action_localization 0x7f0c005f
 int id action_menu_divider 0x7f0c0005
 int id action_menu_presenter 0x7f0c0006
 int id action_mode_bar 0x7f0c0042
 int id action_mode_bar_stub 0x7f0c0041
 int id action_mode_close_button 0x7f0c0034
-int id action_places 0x7f0c005d
+int id action_places 0x7f0c0060
 int id activity_chooser_view_content 0x7f0c0035
 int id adjust_height 0x7f0c0009
 int id adjust_width 0x7f0c000a
@@ -501,6 +501,7 @@ int id production 0x7f0c0012
 int id progress_circular 0x7f0c0007
 int id progress_horizontal 0x7f0c0008
 int id radio 0x7f0c003f
+int id ratingBar1 0x7f0c005d
 int id sandbox 0x7f0c0013
 int id satellite 0x7f0c000e
 int id search_badge 0x7f0c0049
@@ -526,7 +527,9 @@ int id terrain 0x7f0c000f
 int id textName 0x7f0c0059
 int id textValue 0x7f0c005a
 int id textView_inferior 0x7f0c0055
+int id textView_nomLocal 0x7f0c005c
 int id textView_superior 0x7f0c0054
+int id textView_tipoLocal 0x7f0c005b
 int id title 0x7f0c003b
 int id up 0x7f0c0001
 int id useLogo 0x7f0c0027
