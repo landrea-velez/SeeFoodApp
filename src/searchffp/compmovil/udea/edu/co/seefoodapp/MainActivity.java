@@ -25,7 +25,7 @@ public class MainActivity extends ListActivity{
         cursor.addRow(new Object[] {"0", R.drawable.watermelon3, "FRUTAS", "Jugos y ensalada de frutas"});
         cursor.addRow(new Object[] {"1", R.drawable.christmas230, "BURBUJAS", "Dulces"});
         cursor.addRow(new Object[] {"2", R.drawable.burger9, "COMIDA RÁPIDA", "Hamburguesas, patacones, pollo"});
-        cursor.addRow(new Object[] {"3", R.drawable.snacks1, "CAFETERÍAS", "Panadería, aperitivos y platos combinados"});
+        cursor.addRow(new Object[] {"3", R.drawable.snacks1, "CAFETERÍAS", "Aperitivos y platos combinados"});
         cursor.addRow(new Object[] {"4", R.drawable.ice63, "HELADOS", "Helados, malteadas, salpicón"});
         cursor.addRow(new Object[] {"5", R.drawable.plate9, "RESTAURANTES", "Almuerzos"});
 
