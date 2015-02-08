@@ -6,8 +6,11 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 
 
 public class MapActivity extends ActionBarActivity {
@@ -41,5 +44,20 @@ public class MapActivity extends ActionBarActivity {
         private void setUpMap() {
             mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
         }
+        
+        public boolean onCreateOptionsMenu(Menu menu) {
+	        getMenuInflater().inflate(R.menu.menu_about, menu);
+	        return super.onCreateOptionsMenu(menu);
+	    }
+	 
+	  public boolean onOptionsItemSelected(MenuItem item) {
+	        switch (item.getItemId()) {
+	            case R.id.menu_ayuda:
+	                startActivity(new Intent(this, MainActivity.class));
+	                return true;	            
+	            default:
+	                return false;
+	        }
+	    }
         
     }

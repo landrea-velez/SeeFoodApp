@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5px"
-        android:drawableLeft="@drawable/flag32"
+        android:drawableLeft="@drawable/ic_menu_localization"
         android:gravity="left"
         android:onClick="mostrarMap"
         android:text="  Estoy en"

@@ -3,6 +3,7 @@ package searchffp.compmovil.udea.edu.co.seefoodapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.app.ListActivity;
@@ -36,8 +37,6 @@ public class MainActivity extends ListActivity{
 
         ListView listado = getListView();
         listado.setAdapter(adapter);
-
-
     }
 
     @Override
@@ -64,7 +63,10 @@ public class MainActivity extends ListActivity{
                 return true;
             case R.id.action_localization:
                 startActivity(new Intent(this, MapActivity.class));
-                return true;
+                return true;                
+            case R.id.action_about:
+                startActivity(new Intent(this,AboutActivity.class));
+                return true;                
             default:
                 return false;
         }

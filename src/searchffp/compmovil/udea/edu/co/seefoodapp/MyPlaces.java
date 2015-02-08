@@ -10,14 +10,17 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 
-public class MyPlaces extends Activity{
+public class MyPlaces extends ActionBarActivity{
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,10 +64,24 @@ public class MyPlaces extends Activity{
    }
 
     public void mostrarMap(View view) {
-
         Intent intent = new Intent(this, MapActivity.class );
         startActivity(intent);
 
+    }
+    
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_about, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+ 
+  public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_ayuda:
+                startActivity(new Intent(this, MainActivity.class));
+                return true;	            
+            default:
+                return false;
+        }
     }
 }
 
