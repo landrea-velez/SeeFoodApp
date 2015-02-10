@@ -20,15 +20,15 @@ public class DataProvider extends ContentProvider {
 	
     private static final UriMatcher sURIMatcher = new UriMatcher(UriMatcher.NO_MATCH);
     static {
-        sURIMatcher.addURI(DataBaseManager.AUTHORITY, DataBaseManager.TABLE_NAME, DataBaseManager.STATUS_DIR);
-        sURIMatcher.addURI(DataBaseManager.AUTHORITY, DataBaseManager.TABLE_NAME + "/#", DataBaseManager.STATUS_ITEM);
+        sURIMatcher.addURI(DataBaseManager.AUTHORITY, DataBaseManager.TABLE_NAME_LOCAL, DataBaseManager.STATUS_DIR);
+        sURIMatcher.addURI(DataBaseManager.AUTHORITY, DataBaseManager.TABLE_NAME_LOCAL + "/#", DataBaseManager.STATUS_ITEM);
     }
 
 
     private DbHelper dbHelper;
     @Override
     public boolean onCreate() {
-        dbHelper = new DbHelper(getContext());
+      //  dbHelper = new DbHelper(getContext());
         Log.d(TAG, "onCreated DataProvider");
         return true;
     }
@@ -36,7 +36,7 @@ public class DataProvider extends ContentProvider {
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
-        queryBuilder.setTables(DataBaseManager.TABLE_NAME);
+        queryBuilder.setTables(DataBaseManager.TABLE_NAME_LOCAL);
      
         int uriType = sURIMatcher.match(uri);
         switch (uriType) {
@@ -76,7 +76,7 @@ public class DataProvider extends ContentProvider {
 
        SQLiteDatabase bd = dbHelper.getWritableDatabase();
 
-        long rowId = bd.insert(DataBaseManager.TABLE_NAME, null, values);
+        long rowId = bd.insert(DataBaseManager.TABLE_NAME_LOCAL, null, values);
         Log.d(TAG, "rowId: " + rowId);
 
 // Was insert successful?

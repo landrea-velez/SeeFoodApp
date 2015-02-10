@@ -10,10 +10,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="5px"
         android:drawableLeft="@drawable/ic_menu_localization"
-        android:gravity="left"
         android:onClick="mostrarMap"
-        android:text="  Estoy en"
-        android:textSize="8pt" />
+        android:text="   Estoy en..."
+        android:textSize="6pt" />
 
     <TextView
         android:layout_width="match_parent"
@@ -30,7 +29,7 @@
         <ListView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/listView">
+            android:id="@+id/lstComentario">
         </ListView>
     </FrameLayout>
 </LinearLayout>

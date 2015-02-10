@@ -15,7 +15,7 @@
 	    android:layout_alignLeft="@+id/textView3"
 	    android:layout_below="@+id/textView3"
 	    android:layout_marginTop="29dp"
-	    android:text="ESTOY EN: Permite conocer su posición y los lugares de interés más cercanos."
+	    android:text="VER TODO: Permite conocer su posición y los lugares de interés más cercanos."
 	    android:textSize="18dp" />
 
 	<TextView
@@ -25,7 +25,7 @@
 	    android:layout_alignLeft="@+id/textView4"
 	    android:layout_below="@+id/textView4"
 	    android:layout_marginTop="29dp"
-	    android:text="MIS SITIOS: Muestra un listado de los lugares favoritos."
+	    android:text="MIS SITIOS VISITADOS: Muestra un listado de los lugares visitados."
 	    android:textSize="18dp" />
 
 	<TextView

@@ -44,7 +44,7 @@ public class MyPlaces extends ActionBarActivity{
             startManagingCursor(cursor);
 
             // Get the list view
-            ListView listView = (ListView) findViewById(R.id.listView);
+            ListView listView = (ListView) findViewById(R.id.lstComentario);
                        
 
             SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.row, cursor, from, to);

@@ -3,17 +3,25 @@
 
     <string name="app_name">SFFoodApp</string>
     <string name="hello_world">Hello world!</string>
-            
     <string name="action_places">Settings</string>
-     <string name="places">Mis sitios favoritos</string>
-          
-     <string name="action_localization">Settings</string>
-     <string name="localization">Estoy en</string>
-     
-     <string name="action_about">Settings</string>
-     <string name="about">Ayuda</string>
-     
-     
+    <string name="places">Sitios visitados</string>
+    <string name="action_localization">Settings</string>
+    <string name="localization">Estoy en</string>
+    <string name="action_about">Settings</string>
+    <string name="about">Ayuda</string>
     <string name="refresh">refresh</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_options">Opciones</string>
+    <string name="title_activity_help">Ayuda</string>
+    <string name="map">Ir a Mapa</string>
+    <string name="normalType">Normal</string>
+    <string name="hybridType">Hibrido</string>
+    <string name="satelliteType">Satélite</string>
+    <string name="terrainType">Tierra</string>
+    <string name="title_activity_places">Lugares</string>
+    <string name="title_activity_consulta_locales">Locales Visitados</string>
+    <string name="title_activity_map_activity">Locales UdeA</string>
+    <string name="strConsultar">...Todo</string>
+    <string name="title_activity_comentarios_local">Comentarios</string>
 
 </resources>

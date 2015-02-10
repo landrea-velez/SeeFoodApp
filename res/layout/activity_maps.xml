@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="308dp"
+        android:layout_weight="5.36" />
+
+    <LinearLayout
+        android:id="@+id/mapClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.46"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonNormal"
+            style="@attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/normalType"            
+            android:onClick="setNormalType"/>
+
+        <Button
+            android:id="@+id/buttonHybrid"
+            style="@attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hybridType"           
+            android:onClick="setHybridType"/>
+
+        <Button
+            android:id="@+id/buttonSatellite"
+            style="@attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/satelliteType"
+            android:onClick="setSatelliteType" />
+
+        <Button
+            android:id="@+id/buttonTerrain"
+            style="@attr/buttonBarButtonStyle"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:text="@string/terrainType"
+            android:onClick="setTerrainType" />
+    </LinearLayout>
+
+</LinearLayout>

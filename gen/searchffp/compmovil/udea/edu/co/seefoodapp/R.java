@@ -2084,7 +2084,9 @@ containing a value of this type.
         public static final int watermelon3=0x7f02005f;
     }
     public static final class id {
-        public static final int action_about=0x7f0c0062;
+        public static final int FrameLayout1=0x7f0c0068;
+        public static final int LinearLayout1=0x7f0c0060;
+        public static final int action_about=0x7f0c006e;
         public static final int action_bar=0x7f0c0045;
         public static final int action_bar_activity_content=0x7f0c0003;
         public static final int action_bar_container=0x7f0c0044;
@@ -2093,20 +2095,26 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f0c0033;
         public static final int action_bar_title=0x7f0c0032;
         public static final int action_context_bar=0x7f0c0046;
-        public static final int action_localization=0x7f0c0063;
+        public static final int action_localization=0x7f0c006f;
         public static final int action_menu_divider=0x7f0c0005;
         public static final int action_menu_presenter=0x7f0c0006;
         public static final int action_mode_bar=0x7f0c0042;
         public static final int action_mode_bar_stub=0x7f0c0041;
         public static final int action_mode_close_button=0x7f0c0034;
-        public static final int action_places=0x7f0c0064;
+        public static final int action_places=0x7f0c0070;
+        public static final int action_settings=0x7f0c006d;
         public static final int activity_chooser_view_content=0x7f0c0035;
         public static final int adjust_height=0x7f0c0009;
         public static final int adjust_width=0x7f0c000a;
         public static final int always=0x7f0c0028;
         public static final int beginning=0x7f0c002f;
         public static final int book_now=0x7f0c0019;
-        public static final int button=0x7f0c005b;
+        public static final int btnConsultar=0x7f0c005b;
+        public static final int button=0x7f0c006a;
+        public static final int buttonHybrid=0x7f0c0064;
+        public static final int buttonNormal=0x7f0c0063;
+        public static final int buttonSatellite=0x7f0c0065;
+        public static final int buttonTerrain=0x7f0c0066;
         public static final int buyButton=0x7f0c0015;
         public static final int buy_now=0x7f0c001a;
         public static final int buy_with_google=0x7f0c001b;
@@ -2132,23 +2140,27 @@ containing a value of this type.
         public static final int icon=0x7f0c003a;
         public static final int ifRoom=0x7f0c002a;
         public static final int image=0x7f0c0037;
-        public static final int imageView_imagen=0x7f0c0057;
+        public static final int imageView_imagen=0x7f0c005d;
         public static final int listMode=0x7f0c0020;
-        public static final int listView=0x7f0c005c;
         public static final int list_item=0x7f0c0039;
-        public static final int map=0x7f0c005a;
+        public static final int lstComentario=0x7f0c005a;
+        public static final int lstLocal=0x7f0c005c;
+        public static final int map=0x7f0c0061;
+        public static final int mapClass=0x7f0c0062;
         public static final int match_parent=0x7f0c0017;
-        public static final int menu_ayuda=0x7f0c0065;
+        public static final int menu_ayuda=0x7f0c0071;
         public static final int middle=0x7f0c0031;
         public static final int monochrome=0x7f0c001f;
         public static final int never=0x7f0c002b;
         public static final int none=0x7f0c000b;
         public static final int normal=0x7f0c000d;
+        public static final int places=0x7f0c0067;
+        public static final int placesList=0x7f0c0069;
         public static final int production=0x7f0c0012;
         public static final int progress_circular=0x7f0c0007;
         public static final int progress_horizontal=0x7f0c0008;
         public static final int radio=0x7f0c003f;
-        public static final int ratingBar1=0x7f0c0061;
+        public static final int ratingBar1=0x7f0c0059;
         public static final int sandbox=0x7f0c0013;
         public static final int satellite=0x7f0c000e;
         public static final int search_badge=0x7f0c0049;
@@ -2171,16 +2183,16 @@ containing a value of this type.
         public static final int submit_area=0x7f0c0050;
         public static final int tabMode=0x7f0c0021;
         public static final int terrain=0x7f0c000f;
-        public static final int textName=0x7f0c005d;
-        public static final int textValue=0x7f0c005e;
+        public static final int textName=0x7f0c006b;
+        public static final int textValue=0x7f0c006c;
         public static final int textView2=0x7f0c0056;
         public static final int textView3=0x7f0c0054;
         public static final int textView4=0x7f0c0053;
         public static final int textView5=0x7f0c0055;
-        public static final int textView_inferior=0x7f0c0059;
-        public static final int textView_nomLocal=0x7f0c0060;
-        public static final int textView_superior=0x7f0c0058;
-        public static final int textView_tipoLocal=0x7f0c005f;
+        public static final int textView_inferior=0x7f0c005f;
+        public static final int textView_nomLocal=0x7f0c0058;
+        public static final int textView_superior=0x7f0c005e;
+        public static final int textView_tipoLocal=0x7f0c0057;
         public static final int title=0x7f0c003b;
         public static final int up=0x7f0c0001;
         public static final int useLogo=0x7f0c0027;
@@ -2238,16 +2250,25 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
         public static final int about_layout=0x7f030017;
-        public static final int activity_main=0x7f030018;
-        public static final int map_layout=0x7f030019;
-        public static final int my_places=0x7f03001a;
-        public static final int row=0x7f03001b;
-        public static final int site_comment=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int activity_comentarios_local=0x7f030018;
+        public static final int activity_consulta_locales=0x7f030019;
+        public static final int activity_main=0x7f03001a;
+        public static final int activity_maps=0x7f03001b;
+        public static final int activity_options=0x7f03001c;
+        public static final int activity_places=0x7f03001d;
+        public static final int map_layout=0x7f03001e;
+        public static final int my_places=0x7f03001f;
+        public static final int row=0x7f030020;
+        public static final int support_simple_spinner_dropdown_item=0x7f030021;
     }
     public static final class menu {
-        public static final int main=0x7f0d0000;
-        public static final int menu_about=0x7f0d0001;
+        public static final int comentarios_local=0x7f0d0000;
+        public static final int consulta_locales=0x7f0d0001;
+        public static final int main=0x7f0d0002;
+        public static final int maps=0x7f0d0003;
+        public static final int menu_about=0x7f0d0004;
+        public static final int options=0x7f0d0005;
+        public static final int places=0x7f0d0006;
     }
     public static final class raw {
         public static final int gtm_analytics=0x7f050000;
@@ -2314,6 +2335,7 @@ containing a value of this type.
         public static final int action_about=0x7f070039;
         public static final int action_localization=0x7f070037;
         public static final int action_places=0x7f070035;
+        public static final int action_settings=0x7f07003c;
         public static final int app_name=0x7f070033;
         /**   Text for notification shown when the Android Wear apps needs to be updated. Only shown on the wearable. [CHAR LIMIT=NONE] 
          */
@@ -2418,11 +2440,23 @@ containing a value of this type.
         public static final int create_calendar_title=0x7f070004;
         public static final int decline=0x7f070003;
         public static final int hello_world=0x7f070034;
+        public static final int hybridType=0x7f070041;
         public static final int localization=0x7f070038;
+        public static final int map=0x7f07003f;
+        public static final int normalType=0x7f070040;
         public static final int places=0x7f070036;
         public static final int refresh=0x7f07003b;
+        public static final int satelliteType=0x7f070042;
         public static final int store_picture_message=0x7f070001;
         public static final int store_picture_title=0x7f070000;
+        public static final int strConsultar=0x7f070047;
+        public static final int terrainType=0x7f070043;
+        public static final int title_activity_comentarios_local=0x7f070048;
+        public static final int title_activity_consulta_locales=0x7f070045;
+        public static final int title_activity_help=0x7f07003e;
+        public static final int title_activity_map_activity=0x7f070046;
+        public static final int title_activity_options=0x7f07003d;
+        public static final int title_activity_places=0x7f070044;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */

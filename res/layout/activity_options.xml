@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    
+    android:baselineAligned="false"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    tools:context="co.edu.udea.maps.OptionsActivity" >  
+    <Button
+        android:id="@+id/places"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:onClick="showPlaces"
+        android:text="@string/places" />
+
+    <Button
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:onClick="goMap"
+        android:text="@string/map" />
+
+</LinearLayout>

@@ -59,10 +59,10 @@ public class MainActivity extends ListActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_places:
-                startActivity(new Intent(this, MyPlaces.class));
+                startActivity(new Intent(this, ConsultaLocales.class));
                 return true;
             case R.id.action_localization:
-                startActivity(new Intent(this, MapActivity.class));
+                startActivity(new Intent(this, MapsActivity.class));
                 return true;                
             case R.id.action_about:
                 startActivity(new Intent(this,AboutActivity.class));
