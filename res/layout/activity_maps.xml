@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.46"
-        android:gravity="center_vertical|center_horizontal"
+        android:gravity="center_vertical|center_horizontal|right"
         android:orientation="horizontal" >
 
         <Button
@@ -36,21 +36,8 @@
             android:text="@string/hybridType"           
             android:onClick="setHybridType"/>
 
-        <Button
-            android:id="@+id/buttonSatellite"
-            style="@attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/satelliteType"
-            android:onClick="setSatelliteType" />
 
-        <Button
-            android:id="@+id/buttonTerrain"
-            style="@attr/buttonBarButtonStyle"
-            android:layout_width="78dp"
-            android:layout_height="wrap_content"
-            android:text="@string/terrainType"
-            android:onClick="setTerrainType" />
+        
     </LinearLayout>
 
 </LinearLayout>

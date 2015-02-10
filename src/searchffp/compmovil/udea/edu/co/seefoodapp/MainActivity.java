@@ -10,9 +10,11 @@ import android.app.ListActivity;
 import android.database.MatrixCursor;
 import android.widget.SimpleCursorAdapter;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class MainActivity extends ListActivity{
 
@@ -37,17 +39,31 @@ public class MainActivity extends ListActivity{
 
         ListView listado = getListView();
         listado.setAdapter(adapter);
-    }
+        
+        listado.setOnItemClickListener(new OnItemClickListener() {
 
-    @Override
-    public void onListItemClick(ListView lista, View view, int posicion, long id) {
-        TextView textoTitulo = (TextView) view.findViewById(R.id.textView_superior);
-        CharSequence texto = " " + textoTitulo.getText();
-        Toast.makeText(getApplicationContext(), texto, Toast.LENGTH_LONG).show();
-        if (textoTitulo.getText().equals("FRUTAS")){
-        	startActivity(new Intent(this, MapActivity.class));
-        }      
-    }
+			@Override
+			public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
+				// ListView Clicked item index
+				TextView textoTitulo = (TextView) view.findViewById(R.id.textView_superior);
+		        String texto = " " + textoTitulo.getText();
+				throwActivity(position, texto);
+
+			}
+
+		});
+
+	}
+
+	public void throwActivity(int position, String name) {
+		Bundle bundle = new Bundle();
+		bundle.putInt("position", position);
+		bundle.putString("name", name);
+		Intent intent = new Intent();
+		intent.setClass(this, MapsActivity.class);
+		intent.putExtras(bundle);
+		startActivity(intent);
+	}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -60,10 +76,7 @@ public class MainActivity extends ListActivity{
         switch (item.getItemId()) {
             case R.id.action_places:
                 startActivity(new Intent(this, ConsultaLocales.class));
-                return true;
-            case R.id.action_localization:
-                startActivity(new Intent(this, MapsActivity.class));
-                return true;                
+                return true;                          
             case R.id.action_about:
                 startActivity(new Intent(this,AboutActivity.class));
                 return true;                

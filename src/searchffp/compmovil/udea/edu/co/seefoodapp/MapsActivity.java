@@ -1,7 +1,11 @@
 package searchffp.compmovil.udea.edu.co.seefoodapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -13,7 +17,7 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends Activity {
+public class MapsActivity extends ActionBarActivity {
 
 	private GoogleMap googleMap;
 
@@ -60,24 +64,6 @@ public class MapsActivity extends Activity {
 	}
 
 	/**
-	 * funcion de onClick para poner el mapa de tipo Satelite
-	 * 
-	 * @param view
-	 */
-	public void setSatelliteType(View view) {
-		googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-	}
-
-	/**
-	 * funcion de onClick para poner el mapa de tipo Tierra
-	 * 
-	 * @param view
-	 */
-	public void setTerrainType(View view) {
-		googleMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
-	}
-
-	/**
 	 * function to load map. If map is not created it will create it for you
 	 * */
 	private void initilizeMap(int position, String name) {
@@ -99,25 +85,22 @@ public class MapsActivity extends Activity {
 
 				switch (position) {
 				case 0:
-					setPosition(6.230436, -75.570592, Float.parseFloat("210.0"),name);
+					setPosition(6.268082729, -75.568285882, Float.parseFloat("300.0"),name);
 					break;
 				case 1:
-					setPosition(6.338750, -75.542305, Float.parseFloat("240.0"),name);
+					setPosition(6.268301355, -75.568414629, Float.parseFloat("300.0"),name);
 					break;
 				case 2:
-					setPosition(6.267172, -75.569154, Float.parseFloat("180.0"),name);
+					setPosition(6.266451027, -75.569525063, Float.parseFloat("300.0"),name);
 					break;
 				case 3:
-					setPosition(6.279059, -75.571128, Float.parseFloat("120.0"),name);
+					setPosition(6.279059, -75.571128, Float.parseFloat("300.0"),name);
 					break;
 				case 4:
 					setPosition(6.174158, -75.597024, Float.parseFloat("300.0"),name);
 					break;
 				case 5:
-					setPosition(6.246773, -75.567612, Float.parseFloat("30.0"),name);
-					break;
-				case 6:
-					setPosition(6.294377, -75.543973, Float.parseFloat("0.0"),name);
+					setPosition(6.246773, -75.567612, Float.parseFloat("300.0"),name);
 					break;
 				default:
 					break;
@@ -131,8 +114,7 @@ public class MapsActivity extends Activity {
 		CameraPosition cameraPosition = new CameraPosition.Builder()
 				.target(new LatLng(latitude, longitude)).zoom(16).build();
 
-		googleMap.animateCamera(CameraUpdateFactory
-				.newCameraPosition(cameraPosition));
+		googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 		MarkerOptions marker = new MarkerOptions().position(new LatLng(latitude, longitude)).title(title);
 		marker.icon(BitmapDescriptorFactory.defaultMarker(color));
 		// adding marker
@@ -144,5 +126,20 @@ public class MapsActivity extends Activity {
 		super.onResume();
 		initilizeMap(-1,"");
 	}
+	
+	 public boolean onCreateOptionsMenu(Menu menu) {
+	        getMenuInflater().inflate(R.menu.menu_about, menu);
+	        return super.onCreateOptionsMenu(menu);
+	    }
+	 
+	  public boolean onOptionsItemSelected(MenuItem item) {
+	        switch (item.getItemId()) {
+	            case R.id.menu_ayuda:
+	                startActivity(new Intent(this, MainActivity.class));
+	                return true;	            
+	            default:
+	                return false;
+	        }
+	    }
 
 }

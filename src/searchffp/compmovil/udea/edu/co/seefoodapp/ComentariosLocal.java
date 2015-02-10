@@ -34,7 +34,7 @@ Button btn;
 			DbHelper dbMy =  new DbHelper(this, null, null, DataBaseManager.DB_SCHEMA_VERSION);
 			
 			SQLiteDatabase db = dbMy.getReadableDatabase();
-			Cursor rs = db.rawQuery("SELECT * FROM " + DataBaseManager.TABLE_NAME_COMENTARIO + "WHERE " + DataBaseManager.CN_ID + "='334';", null);
+			Cursor rs = db.rawQuery("SELECT * FROM " + DataBaseManager.TABLE_NAME_COMENTARIO + "WHERE " + DataBaseManager.CN_ID + "=='334';", null);
 			Comentario objComentario;
 			while (rs.moveToNext()) {
 				objComentario = new Comentario();
@@ -70,7 +70,7 @@ Button btn;
 			// as you specify a parent activity in AndroidManifest.xml.
 			switch (item.getItemId()) {
 	        case R.id.menu_ayuda:
-	            startActivity(new Intent(this, MainActivity.class));
+	            startActivity(new Intent(this, ConsultaLocales.class));
 	            return true;	            
 	        default:
 	            return false;
