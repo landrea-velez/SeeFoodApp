@@ -18,6 +18,7 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,32 +32,24 @@ Button btn;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_comentarios_local);
-
 		String name="";
 		Bundle bundle = this.getIntent().getExtras();
 		if (bundle != null) {
 			name = bundle.getString("name");
 		}
-		
+				
 		TextView txtnom = (TextView) findViewById(R.id.textView_tipoLocal);
-		txtnom.setText(name);
-		
-		String entrada = getNomLocal(name);
-		Log.e("LogsAndroid", "" + entrada);
-		
-		
-		
-		
+		txtnom.setText(name);		
+		String entrada = getNomLocal(name);		
 		ArrayList<Comentario> comentarios = new ArrayList<Comentario>();
 		
 		try {
 			
 			
-			DbHelper dbMy =  new DbHelper(this, null, null, DataBaseManager.DB_SCHEMA_VERSION);
-			
+			DbHelper dbMy =  new DbHelper(this, null, null, DataBaseManager.DB_SCHEMA_VERSION);			
 			SQLiteDatabase db = dbMy.getReadableDatabase();
 			Cursor rs = db.rawQuery("select * from " + DataBaseManager.TABLE_NAME_COMENTARIO + " where "+DataBaseManager.CN_NAME +" = '"+entrada+"' " , null);
-			Log.e("try LogsAndroid", ""+entrada.length());
+			
 			Comentario objComentario;
 			while (rs.moveToNext()) {
 				objComentario = new Comentario();
@@ -73,6 +66,8 @@ Button btn;
 		ArrayAdapter<Comentario> adaptador = new ArrayAdapter<Comentario>(this, android.R.layout.simple_list_item_1,comentarios);		
 		lv.setAdapter(adaptador);
 		
+		btn= (Button)findViewById(R.id.btnConsultar);
+		btn.setOnClickListener(this);
 		 	        
 	}
 
@@ -91,7 +86,7 @@ Button btn;
 			switch (item.getItemId()) {
 	        case R.id.menu_ayuda:
 	            startActivity(new Intent(this, ConsultaLocales.class));
-	            return true;	            
+	            return true;
 	        default:
 	            return false;
 			}
@@ -99,6 +94,30 @@ Button btn;
 	
 		@Override
 		public void onClick(View v) {
+			
+			//Recuperamos los valores de los campos de texto	
+			TextView txtnombre = (TextView)findViewById(R.id.textView_tipoLocal);
+			String nombre = (String) txtnombre.getText();
+			String entrada = getNomLocal(nombre);	
+			
+			EditText edTComentario = (EditText)findViewById(R.id.edTextComentario);
+			String coment = edTComentario.getText().toString();
+			
+			//Alternativa 1: método sqlExec()	
+			DbHelper dbMy =  new DbHelper(this, null, null, DataBaseManager.DB_SCHEMA_VERSION);			
+			SQLiteDatabase db = dbMy.getReadableDatabase();
+			String sql = "INSERT INTO Comenta (nombre,comentario) VALUES ('" + entrada + "','" + coment + "') ";
+			db.execSQL(sql);
+			
+			edTComentario.setText("");
+			Toast toast1 = Toast.makeText(getApplicationContext(), "Su comentario fue enviado, gracias!", Toast.LENGTH_SHORT);
+			toast1.show();
+			
+			//Alternativa 2: método insert()
+			/*ContentValues nuevoRegistro = new ContentValues();
+			nuevoRegistro.put("codigo", cod);
+			nuevoRegistro.put("nombre", nom);
+			db.insert("Usuarios", null, nuevoRegistro);*/
 					
 		}
 		

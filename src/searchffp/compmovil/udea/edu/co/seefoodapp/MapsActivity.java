@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -44,24 +45,25 @@ public class MapsActivity extends ActionBarActivity {
 	}
 
 	/**
-	 * funcion de onClick para poner el mapa de tipo normal
+	 * funcion de onClick para  el tipo de mapa
 	 * 
 	 * @param view
 	 */
-	public void setNormalType(View view) {
 
-		googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+	
+	public void setType(View view) {
+		Button btn= (Button)findViewById(R.id.buttonHybrid);
+		if (btn.getText().equals("Hibrido")){
+			googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+			btn.setText("Tierra");
+		}else if (btn.getText().equals("Tierra")){
+			googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+			btn.setText("Hibrido");
+		}
+		
 	}
 
-	/**
-	 * funcion de onClick para poner el mapa de tipo Híbrido
-	 * 
-	 * @param view
-	 */
-	public void setHybridType(View view) {
-		googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-
-	}
+	
 
 	/**
 	 * function to load map. If map is not created it will create it for you

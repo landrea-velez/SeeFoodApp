@@ -26,7 +26,32 @@
 	            android:layout_width="fill_parent"
 	            android:layout_height="456dp" >
 	        </ListView>
+	    </FrameLayout>
+	    
+        <TextView
+            android:id="@+id/textView_mensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comentarios_local"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="15dp" />
 
-	    </FrameLayout>    
+        <EditText
+            android:id="@+id/edTextComentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" >
+            <requestFocus />
+        </EditText>
+	    
+         <Button
+             android:id="@+id/btnConsultar"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:drawableLeft="@drawable/flag32"
+             android:text="@string/strConsultar" />
+
     </LinearLayout>   
 </LinearLayout>

@@ -34,8 +34,7 @@ public class ConsultaLocales extends ActionBarActivity implements OnClickListene
 		
 		try {
 			
-			DbHelper dbMy =  new DbHelper(this, null, null, DataBaseManager.DB_SCHEMA_VERSION);
-			
+			DbHelper dbMy =  new DbHelper(this, null, null, DataBaseManager.DB_SCHEMA_VERSION);			
 			SQLiteDatabase db = dbMy.getReadableDatabase();
 			Cursor rs = db.rawQuery("select * from " + DataBaseManager.TABLE_NAME_LOCAL, null);
 			Local objLocal;

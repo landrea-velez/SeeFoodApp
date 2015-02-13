@@ -7,6 +7,16 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin">
+    
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Bienvenido"
+        android:textSize="25sp"
+        android:typeface="serif" />
 
 	<TextView
 	    android:id="@+id/textView4"
@@ -15,7 +25,7 @@
 	    android:layout_alignLeft="@+id/textView3"
 	    android:layout_below="@+id/textView3"
 	    android:layout_marginTop="29dp"
-	    android:text="VER TODO: Permite conocer su posición y los lugares de interés más cercanos."
+	    android:text="Le permite conocer su posición y los lugares de interés más cercanos."
 	    android:textSize="18dp" />
 
 	<TextView
@@ -25,7 +35,7 @@
 	    android:layout_alignLeft="@+id/textView4"
 	    android:layout_below="@+id/textView4"
 	    android:layout_marginTop="29dp"
-	    android:text="MIS SITIOS VISITADOS: Muestra un listado de los lugares visitados."
+	    android:text="MIS SITIOS Muestra un conjunto de lugares visitados y los comentarios realizados."
 	    android:textSize="18dp" />
 
 	<TextView
@@ -34,7 +44,7 @@
 	    android:layout_height="wrap_content"
 	    android:layout_alignLeft="@+id/textView2"
 	    android:layout_below="@+id/textView2"
-	    android:layout_marginTop="28dp"
+	    android:layout_marginTop="37dp"
 	    android:text="LUGARES: Encada opción encontrará los lugares cercanos relacionados con el tipo de comida de interés."
 	    android:textSize="18dp" />
 
@@ -42,11 +52,11 @@
 	    android:id="@+id/textView2"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:layout_alignParentTop="true"
+	    android:layout_below="@+id/textView1"
 	    android:layout_centerHorizontal="true"
-	    android:layout_marginTop="14dp"
+	    android:layout_marginTop="27dp"
 	    android:gravity="center"
-	    android:text="Es una aplicación en recomendación de restaurantes y lugares para comer de todo tipo dentro del campus universitario."
+	    android:text="Esta es una aplicación en recomendación de restaurantes y lugares para comer de todo tipo dentro del campus universitario."
 	    android:textSize="18dp" />
 
 </RelativeLayout>

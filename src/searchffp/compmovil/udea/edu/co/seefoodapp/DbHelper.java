@@ -30,6 +30,10 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " +DataBaseManager.TABLE_NAME_LOCAL+ " ("+DataBaseManager.CN_ID+", "+DataBaseManager.CN_TYPE+", "+DataBaseManager.CN_NAME+", "+DataBaseManager.CN_LATITUDE+", "+DataBaseManager.CN_LONGITUDE+", "+DataBaseManager.CN_ADDRESS+") "
         		+ "VALUES ('"+DataBaseManager.DATA_ID2+"', '"+DataBaseManager.DATA_TYPE2+"', '"+DataBaseManager.DATA_NAME2+"', '"+DataBaseManager.DATA_LATITUDE2+"', '"+DataBaseManager.DATA_LONGITUDE2+"', '"+DataBaseManager.DATA_ADDRESS2+"');");
         
+        db.execSQL("INSERT INTO " +DataBaseManager.TABLE_NAME_LOCAL+ " ("+DataBaseManager.CN_ID+", "+DataBaseManager.CN_TYPE+", "+DataBaseManager.CN_NAME+", "+DataBaseManager.CN_LATITUDE+", "+DataBaseManager.CN_LONGITUDE+", "+DataBaseManager.CN_ADDRESS+") "
+        		+ "VALUES ('"+DataBaseManager.DATA_ID3+"', '"+DataBaseManager.DATA_TYPE3+"', '"+DataBaseManager.DATA_NAME3+"', '"+DataBaseManager.DATA_LATITUDE3+"', '"+DataBaseManager.DATA_LONGITUDE3+"', '"+DataBaseManager.DATA_ADDRESS3+"');");
+        
+        
         
         db.execSQL(DataBaseManager.CREATE_TABLE_COMENTARIO);  
         Log.d(TAG, "onCreate with SQL: " + DataBaseManager.CREATE_TABLE_COMENTARIO);
@@ -48,7 +52,21 @@ public class DbHelper extends SQLiteOpenHelper {
         
         db.execSQL("INSERT INTO " +DataBaseManager.TABLE_NAME_COMENTARIO+ " ("+DataBaseManager.CN_NAME+", "+DataBaseManager.CN_PUNTOS+", "+DataBaseManager.CN_COMENTARIO+") "
         		+ "VALUES ('"+DataBaseManager.DATA_NAME_COMENT5+"', '"+DataBaseManager.DATA_PUNTOS5+"', '"+DataBaseManager.DATA_COMENT5+"');");
-       
+               
+        db.execSQL("INSERT INTO " +DataBaseManager.TABLE_NAME_COMENTARIO+ " ("+DataBaseManager.CN_NAME+", "+DataBaseManager.CN_PUNTOS+", "+DataBaseManager.CN_COMENTARIO+") "
+        		+ "VALUES ('"+DataBaseManager.DATA_NAME_COMENT6+"', '"+DataBaseManager.DATA_PUNTOS6+"', '"+DataBaseManager.DATA_COMENT6+"');");
+        
+        db.execSQL("INSERT INTO " +DataBaseManager.TABLE_NAME_COMENTARIO+ " ("+DataBaseManager.CN_NAME+", "+DataBaseManager.CN_PUNTOS+", "+DataBaseManager.CN_COMENTARIO+") "
+        		+ "VALUES ('"+DataBaseManager.DATA_NAME_COMENT7+"', '"+DataBaseManager.DATA_PUNTOS7+"', '"+DataBaseManager.DATA_COMENT7+"');");
+        
+        db.execSQL("INSERT INTO " +DataBaseManager.TABLE_NAME_COMENTARIO+ " ("+DataBaseManager.CN_NAME+", "+DataBaseManager.CN_PUNTOS+", "+DataBaseManager.CN_COMENTARIO+") "
+        		+ "VALUES ('"+DataBaseManager.DATA_NAME_COMENT8+"', '"+DataBaseManager.DATA_PUNTOS8+"', '"+DataBaseManager.DATA_COMENT8+"');");
+        
+        db.execSQL("INSERT INTO " +DataBaseManager.TABLE_NAME_COMENTARIO+ " ("+DataBaseManager.CN_NAME+", "+DataBaseManager.CN_PUNTOS+", "+DataBaseManager.CN_COMENTARIO+") "
+        		+ "VALUES ('"+DataBaseManager.DATA_NAME_COMENT9+"', '"+DataBaseManager.DATA_PUNTOS9+"', '"+DataBaseManager.DATA_COMENT9+"');");
+        
+        db.execSQL("INSERT INTO " +DataBaseManager.TABLE_NAME_COMENTARIO+ " ("+DataBaseManager.CN_NAME+", "+DataBaseManager.CN_PUNTOS+", "+DataBaseManager.CN_COMENTARIO+") "
+        		+ "VALUES ('"+DataBaseManager.DATA_NAME_COMENT10+"', '"+DataBaseManager.DATA_PUNTOS10+"', '"+DataBaseManager.DATA_COMENT10+"');");
     }
 
         @Override

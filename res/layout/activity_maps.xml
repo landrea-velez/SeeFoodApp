@@ -20,20 +20,12 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/buttonNormal"
-            style="@attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/normalType"            
-            android:onClick="setNormalType"/>
-
-        <Button
             android:id="@+id/buttonHybrid"
             style="@attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hybridType"           
-            android:onClick="setHybridType"/>
+            android:onClick="setType"/>
 
 
         

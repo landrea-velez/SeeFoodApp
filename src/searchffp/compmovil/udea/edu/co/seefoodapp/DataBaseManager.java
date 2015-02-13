@@ -6,9 +6,9 @@ import android.net.Uri;
 public class DataBaseManager {
 
     public static final String DB_NAME = "Servicios.db";
-    public static final int DB_SCHEMA_VERSION = 5;
+    public static final int DB_SCHEMA_VERSION = 6;
     public static final String TABLE_NAME_LOCAL= "Local";
-    public static final String TABLE_NAME_COMENTARIO= "Coment";
+    public static final String TABLE_NAME_COMENTARIO= "Comenta";
 
     //LOS CAMPOS
     public static final String CN_ID = "id";
@@ -58,6 +58,13 @@ public class DataBaseManager {
     public static final String DATA_LONGITUDE2 = "-75.569525063";
     public static final String DATA_ADDRESS2 = "Plazoleta Barrientos";
     
+    public static final String DATA_ID3 = "335";
+    public static final String DATA_TYPE3 = "Frutas y helados";
+    public static final String DATA_NAME3 = "Fruticas";
+    public static final String DATA_LATITUDE3 = "6.268654179";
+    public static final String DATA_LONGITUDE3 = "-75.568463802";
+    public static final String DATA_ADDRESS3 = "Zona de comidas";
+    
     
     public static final String DATA_NAME_COMENT1 = "Arbóreo Gourmet";
     public static final String DATA_PUNTOS1 = "5";
@@ -78,6 +85,26 @@ public class DataBaseManager {
     public static final String DATA_NAME_COMENT5 = "COESDUA";
     public static final String DATA_PUNTOS5 = "4";
     public static final String DATA_COMENT5 = "Tienen mucha variedad en productos";
+    
+    public static final String DATA_NAME_COMENT6 = "Arbóreo Gourmet";
+    public static final String DATA_PUNTOS6 = "5";
+    public static final String DATA_COMENT6 = "Tienen menu variado, saludable a buen precio";
+
+    public static final String DATA_NAME_COMENT7 = "Arbóreo Gourmet";
+    public static final String DATA_PUNTOS7 = "3";
+    public static final String DATA_COMENT7 = "Agilizar el servicio";
+    
+    public static final String DATA_NAME_COMENT8 = "De Lolita Restó Café";
+    public static final String DATA_PUNTOS8 = "4";
+    public static final String DATA_COMENT8 = "Muy buena atención al cliente";
+    
+    public static final String DATA_NAME_COMENT9 = "De Lolita Restó Café";
+    public static final String DATA_PUNTOS9 = "5";
+    public static final String DATA_COMENT9 = "Muy organizado y limpio";
+    
+    public static final String DATA_NAME_COMENT10 = "COESDUA";
+    public static final String DATA_PUNTOS10 = "4";
+    public static final String DATA_COMENT10 = "Recomendado, excelente lugar";
         
 }
 
