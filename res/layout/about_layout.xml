@@ -19,16 +19,6 @@
         android:typeface="serif" />
 
 	<TextView
-	    android:id="@+id/textView4"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignLeft="@+id/textView3"
-	    android:layout_below="@+id/textView3"
-	    android:layout_marginTop="29dp"
-	    android:text="Le permite conocer su posición y los lugares de interés más cercanos."
-	    android:textSize="18dp" />
-
-	<TextView
 	    android:id="@+id/textView5"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
@@ -36,7 +26,7 @@
 	    android:layout_below="@+id/textView4"
 	    android:layout_marginTop="29dp"
 	    android:text="MIS SITIOS Muestra un conjunto de lugares visitados y los comentarios realizados."
-	    android:textSize="18dp" />
+	    android:textSize="16dp" />
 
 	<TextView
 	    android:id="@+id/textView3"
@@ -46,7 +36,7 @@
 	    android:layout_below="@+id/textView2"
 	    android:layout_marginTop="37dp"
 	    android:text="LUGARES: Encada opción encontrará los lugares cercanos relacionados con el tipo de comida de interés."
-	    android:textSize="18dp" />
+	    android:textSize="16dp" />
 
 	<TextView
 	    android:id="@+id/textView2"
@@ -54,9 +44,19 @@
 	    android:layout_height="wrap_content"
 	    android:layout_below="@+id/textView1"
 	    android:layout_centerHorizontal="true"
-	    android:layout_marginTop="27dp"
+	    android:layout_marginTop="14dp"
 	    android:gravity="center"
 	    android:text="Esta es una aplicación en recomendación de restaurantes y lugares para comer de todo tipo dentro del campus universitario."
-	    android:textSize="18dp" />
+	    android:textSize="16dp" />
+
+	<TextView
+	    android:id="@+id/textView4"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/textView3"
+	    android:layout_below="@+id/textView3"
+	    android:layout_marginTop="20dp"
+	    android:text="Le permite conocer su posición y los lugares de interés más cercanos."
+	    android:textSize="16dp" />
 
 </RelativeLayout>

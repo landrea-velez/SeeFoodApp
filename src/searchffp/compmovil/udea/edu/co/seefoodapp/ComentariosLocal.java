@@ -103,6 +103,11 @@ Button btn;
 			EditText edTComentario = (EditText)findViewById(R.id.edTextComentario);
 			String coment = edTComentario.getText().toString();
 			
+			if (coment.equals("")){
+				Toast toast1 = Toast.makeText(getApplicationContext(), "Ingrese un comentario", Toast.LENGTH_SHORT);
+				toast1.show();
+			}else{
+			
 			//Alternativa 1: método sqlExec()	
 			DbHelper dbMy =  new DbHelper(this, null, null, DataBaseManager.DB_SCHEMA_VERSION);			
 			SQLiteDatabase db = dbMy.getReadableDatabase();
@@ -112,6 +117,7 @@ Button btn;
 			edTComentario.setText("");
 			Toast toast1 = Toast.makeText(getApplicationContext(), "Su comentario fue enviado, gracias!", Toast.LENGTH_SHORT);
 			toast1.show();
+			}
 			
 			//Alternativa 2: método insert()
 			/*ContentValues nuevoRegistro = new ContentValues();
