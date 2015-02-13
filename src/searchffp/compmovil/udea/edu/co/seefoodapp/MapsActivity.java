@@ -79,28 +79,42 @@ public class MapsActivity extends ActionBarActivity {
 						.show();
 			} else {
 				googleMap.setMyLocationEnabled(true);
-				googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+				googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 				googleMap.getUiSettings().setMyLocationButtonEnabled(true);
 				googleMap.getUiSettings().setCompassEnabled(true);
 
 				switch (position) {
 				case 0:
-					setPosition(6.268082729, -75.568285882, Float.parseFloat("300.0"),name);
+					setPosition(6.268539533, -75.568485260, Float.parseFloat("300.0"),name);
+					setPosition(6.265729380, -75.569230914, Float.parseFloat("300.0"),name);
 					break;
 				case 1:
-					setPosition(6.268301355, -75.568414629, Float.parseFloat("300.0"),name);
+					setPosition(6.268091616, -75.567455292, Float.parseFloat("300.0"),name);
+					setPosition(6.266363932, -75.567938090, Float.parseFloat("300.0"),name);
+					setPosition(6.268091616, -75.568270684, Float.parseFloat("300.0"),name);
+					setPosition(6.266747862, -75.570330620, Float.parseFloat("300.0"),name);
+					setPosition(6.267856993, -75.569418669, Float.parseFloat("300.0"),name);
 					break;
 				case 2:
-					setPosition(6.266451027, -75.569525063, Float.parseFloat("300.0"),name);
+					setPosition(6.268656845, -75.568517447, Float.parseFloat("300.0"),name);
+					setPosition(6.268048957, -75.570137501, Float.parseFloat("300.0"),name);
+					setPosition(6.266321273, -75.569536686, Float.parseFloat("300.0"),name);
+					setPosition(6.266033325, -75.569214821, Float.parseFloat("300.0"),name);			
 					break;
 				case 3:
-					setPosition(6.279059, -75.571128, Float.parseFloat("300.0"),name);
+					setPosition(6.268038293, -75.568289459, Float.parseFloat("300.0"),name);
+					setPosition(6.266559452, -75.570420027, Float.parseFloat("300.0"),name);
+					setPosition(6.266042213, -75.569540262, Float.parseFloat("300.0"),name);
 					break;
 				case 4:
-					setPosition(6.174158, -75.597024, Float.parseFloat("300.0"),name);
+					setPosition(6.266033325, -75.569214821, Float.parseFloat("300.0"),name);
+					setPosition(6.268582192, -75.568463803, Float.parseFloat("300.0"),name);
 					break;
 				case 5:
-					setPosition(6.246773, -75.567612, Float.parseFloat("300.0"),name);
+					setPosition(6.266474134, -75.569497347, Float.parseFloat("300.0"),name);
+					setPosition(6.266170189, -75.569561720, Float.parseFloat("300.0"),name);
+					setPosition(6.267849883, -75.569502712, Float.parseFloat("300.0"),name);
+					setPosition(6.268358233, -75.568777621, Float.parseFloat("300.0"),name);
 					break;
 				default:
 					break;
@@ -111,8 +125,7 @@ public class MapsActivity extends ActionBarActivity {
 	}
 
 	public void setPosition(double latitude, double longitude, float color, String title) {
-		CameraPosition cameraPosition = new CameraPosition.Builder()
-				.target(new LatLng(latitude, longitude)).zoom(16).build();
+		CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(latitude, longitude)).zoom(16).build();
 
 		googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 		MarkerOptions marker = new MarkerOptions().position(new LatLng(latitude, longitude)).title(title);

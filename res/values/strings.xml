@@ -14,7 +14,7 @@
     <string name="title_activity_options">Opciones</string>
     <string name="title_activity_help">Ayuda</string>
     <string name="map">Ir a Mapa</string>
-    <string name="normalType">Normal</string>
+    <string name="normalType">Tierra</string>
     <string name="hybridType">Hibrido</string>
     <string name="satelliteType">Satélite</string>
     <string name="terrainType">Tierra</string>

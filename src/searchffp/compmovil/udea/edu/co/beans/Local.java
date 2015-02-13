@@ -48,8 +48,9 @@ public class Local {
 	}
 	
 	public String toString(){
-		return CN_TYPE +":  "+ CN_NAME + ". ";
+		return CN_TYPE +":"+ CN_NAME;
 	}
+	
 	
 
 }

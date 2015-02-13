@@ -2,16 +2,16 @@ package searchffp.compmovil.udea.edu.co.beans;
 
 public class Comentario {
 	
-	private String CN_ID;
+	private String CN_NAME;
 	private String CN_PUNTOS;
 	private String CN_COMENTARIO;
 	
 	
 	public String getCN_ID() {
-		return CN_ID;
+		return CN_NAME;
 	}
 	public void setCN_ID(String cN_ID) {
-		CN_ID = cN_ID;
+		CN_NAME = cN_ID;
 	}
 	public String getCN_PUNTOS() {
 		return CN_PUNTOS;
@@ -24,6 +24,10 @@ public class Comentario {
 	}
 	public void setCN_COMENTARIO(String cN_COMENTARIO) {
 		CN_COMENTARIO = cN_COMENTARIO;
+	}
+	
+	public String toString(){
+		return CN_COMENTARIO;
 	}
 	
 

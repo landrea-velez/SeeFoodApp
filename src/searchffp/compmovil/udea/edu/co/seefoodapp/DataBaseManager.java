@@ -6,9 +6,9 @@ import android.net.Uri;
 public class DataBaseManager {
 
     public static final String DB_NAME = "Servicios.db";
-    public static final int DB_SCHEMA_VERSION = 4;
+    public static final int DB_SCHEMA_VERSION = 5;
     public static final String TABLE_NAME_LOCAL= "Local";
-    public static final String TABLE_NAME_COMENTARIO= "Comentarios";
+    public static final String TABLE_NAME_COMENTARIO= "Coment";
 
     //LOS CAMPOS
     public static final String CN_ID = "id";
@@ -31,7 +31,7 @@ public class DataBaseManager {
             + CN_ADDRESS + " varchar(20));";
     
     public static final String CREATE_TABLE_COMENTARIO = "CREATE TABLE " + TABLE_NAME_COMENTARIO + " ("
-            + CN_ID + " varchar(4),"
+            + CN_NAME + " varchar(4),"
             + CN_PUNTOS + " varchar(4),"
             + CN_COMENTARIO + " varchar(200));";
     
@@ -59,35 +59,26 @@ public class DataBaseManager {
     public static final String DATA_ADDRESS2 = "Plazoleta Barrientos";
     
     
-    public static final String DATA_ID_COMENT1 = "334";
+    public static final String DATA_NAME_COMENT1 = "Arbóreo Gourmet";
     public static final String DATA_PUNTOS1 = "5";
     public static final String DATA_COMENT1 = "Excelente lugar para comer";
 
-    public static final String DATA_ID_COMENT2 = "334";
+    public static final String DATA_NAME_COMENT2 = "Arbóreo Gourmet";
     public static final String DATA_PUNTOS2 = "5";
     public static final String DATA_COMENT2 = "100% recomendado";
     
-    public static final String DATA_ID_COMENT3 = "333";
+    public static final String DATA_NAME_COMENT3 = "De Lolita Restó Café";
     public static final String DATA_PUNTOS3 = "4";
     public static final String DATA_COMENT3 = "Excelente servicio";
     
-    public static final String DATA_ID_COMENT4 = "332";
+    public static final String DATA_NAME_COMENT4 = "COESDUA";
     public static final String DATA_PUNTOS4 = "5";
     public static final String DATA_COMENT4 = "Muy organizado";
     
-    public static final String DATA_ID_COMENT5 = "332";
+    public static final String DATA_NAME_COMENT5 = "COESDUA";
     public static final String DATA_PUNTOS5 = "4";
     public static final String DATA_COMENT5 = "Tienen mucha variedad en productos";
-    
-    
-    
-    public static final String AUTHORITY = "searchffp.compmovil.udea.edu.co.seefoodapp.DataProvider";
-    public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + TABLE_NAME_LOCAL);
-    public static final int STATUS_ITEM = 100;
-    public static final int STATUS_DIR = 110;
-    
-    
-    
+        
 }
 
 

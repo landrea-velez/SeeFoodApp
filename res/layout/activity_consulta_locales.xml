@@ -26,5 +26,16 @@
         android:textFilterEnabled="true" >
 
     </ListView>
+    
+    <ListView
+        android:id="@+id/lstCodLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnConsultar"
+        android:layout_below="@+id/btnConsultar"
+        android:textFilterEnabled="true"
+        android:visibility="invisible" >
+
+    </ListView>
 
 </RelativeLayout>

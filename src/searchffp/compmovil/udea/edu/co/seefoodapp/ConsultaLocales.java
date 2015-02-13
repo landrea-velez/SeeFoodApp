@@ -12,12 +12,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class ConsultaLocales extends ActionBarActivity implements OnClickListener {
 	
@@ -52,13 +54,21 @@ public class ConsultaLocales extends ActionBarActivity implements OnClickListene
 		}
 		
 		
-		ListView ls = (ListView)findViewById(R.id.lstLocal);		
+		final ListView ls = (ListView)findViewById(R.id.lstLocal);		
 		ArrayAdapter<Local> adaptador = new ArrayAdapter<Local>(this, android.R.layout.simple_list_item_1,locales);		
 		ls.setAdapter(adaptador);
-		
-		btn= (Button)findViewById(R.id.btnConsultar);
-		btn.setOnClickListener(this);
+	
+
+		 ls.setOnItemClickListener(new OnItemClickListener() {
+
+	            public void onItemClick(AdapterView<?> customerAdapter, View footer, int selectedInt, long selectedLong) {            
+	                
+	                String listChoice = (String) (ls.getItemAtPosition(selectedInt).toString());               
+	                verComentariosActivity(listChoice);
+	            }
+	        });
 	}
+	
 
 		@Override
 		public boolean onCreateOptionsMenu(Menu menu) {
@@ -86,6 +96,25 @@ public class ConsultaLocales extends ActionBarActivity implements OnClickListene
 			Intent intent = new Intent(this, ComentariosLocal.class );
 	        startActivity(intent);
 			
+		}
+		
+		public void verComentariosActivity(String name) {					
+			
+			Intent intent = new Intent();		
+			intent.setClass(this, ComentariosLocal.class);
+			
+			//Create the bundle
+            Bundle bundle = new Bundle();
+
+            //Add your data to bundle
+            bundle.putString("name",name);
+            bundle.putString("PhoneNumber",name);
+
+            //Add the bundle to the intent
+            intent.putExtras(bundle);
+
+          //Fire that second activity
+             startActivity(intent);
 		}
 
 	}
